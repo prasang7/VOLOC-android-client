@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">VOLOC</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_welcome">Welcome/Courses</string>
+    <string name="nav_item_news_and_updates">News and Updates</string>
+    <string name="nav_item_blog">Blog</string>
+    <string name="nav_item_about">About US</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_welcome</item>
+        <item>@string/nav_item_news_and_updates</item>
+        <item>@string/nav_item_blog</item>
+        <item>@string/nav_item_about</item>
+    </string-array>
+
+    <string name="title_welcome">Welcome/Courses</string>
+    <string name="title_news_and_updates">News and Updates</string>
+    <string name="title_blog">Blog</string>
+    <string name="title_about">About Us</string>
+
+
+
+</resources>
