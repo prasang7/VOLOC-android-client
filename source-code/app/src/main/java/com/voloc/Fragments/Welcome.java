@@ -67,7 +67,7 @@ public class Welcome extends Fragment {
     private void prepareCourseData()
     {
         String courseName[]={"Data science","machine Learning","Microprocessor","Algorithms"};
-        int photoId []={R.mipmap.data_scientist,R.mipmap.data_scientist,R.mipmap.data_scientist,R.mipmap.data_scientist};
+        int photoId []={R.drawable.data_scientist,R.drawable.data_scientist,R.drawable.data_scientist,R.drawable.data_scientist};
         String courseFaculty []={"prof,xyz","prof.abcd","prof,mnbv","prof.gjks"};
 
         for (int i=0;i<photoId.length;i++)
