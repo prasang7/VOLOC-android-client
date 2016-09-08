@@ -3,7 +3,7 @@ This repository contains the android client of VOLOC.
 
 ## Development Setup
 1. Go to the project repo and click the `Fork` button
-2. Clone your forked repository : `https://github.com/prasang7/VOLOC-android-client.git`
+2. Clone your forked repository : `https://github.com/VOLOC/VOLOC-android-client.git`
 3. Move to android project folder `cd source-code`
 4. Open the project with Android Studio
 
@@ -13,6 +13,3 @@ All dependencies are defined in ```source-code/app/build.gradle```. Import the p
 ./gradlew assembleRelease
 ```
 The result apk file will be placed in ```source-code/app/build/outputs/apk/```.
-
-## Contribution policy
-All contributions should be done in **staging** branch.
