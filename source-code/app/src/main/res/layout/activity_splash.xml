@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
+    <!--
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -12,5 +13,23 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         />
+       -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="( VOLOC ICON HERE )"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="100dp"/>
+
+    <!-- TODO: REMOVE THIS TEXTVIEW BELOW-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="splash - 2000 ms"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="100dp"/>
 
 </LinearLayout>

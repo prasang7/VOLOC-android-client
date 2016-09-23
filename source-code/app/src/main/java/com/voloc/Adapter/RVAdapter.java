@@ -20,7 +20,6 @@ import com.voloc.R;
 
 import java.util.List;
 
-
 public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder> {
     private List<Data> coursesList;
     private RecyclerView recyclerView;
@@ -53,7 +52,6 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder> {
                 Toast.makeText(context, "position =" + position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, CourseOpenerActivity.class);
                 context.startActivity(intent);
-
 
         }
     }
