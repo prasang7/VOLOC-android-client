@@ -16,28 +16,43 @@
             android:layout_marginTop="3dp"
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
+            android:clipChildren="false"
+            android:background="@drawable/border"
             >
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/data_scientist"
+                android:src="@mipmap/data_scientist"
                 android:background="@color/colorBlack"
                 android:id="@+id/course_image"
+                />
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/nut"
+                android:src="@mipmap/three_dots_vertical_transp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/course_name"
-                android:text="Data Science"
-                android:textColor="@color/colorWhite"
+                android:text=""
+                android:textColor="@color/colorPrimary"
                 android:textSize="30sp"
                 android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/course_faculty"
                 android:layout_below="@+id/course_name"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimary"
                 />
         </RelativeLayout>
 

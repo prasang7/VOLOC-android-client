@@ -4,33 +4,13 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <!--
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/cambuzz_splash"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:visibility="invisible"
         />
-    -->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="(VOLOC's official logo here)"
-        android:gravity="center"
-        android:textColor="@color/colorWhite"
-        android:textSize="20dp"
-        android:layout_marginTop="150dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="VOLOC"
-        android:textColor="@color/colorWhite"
-        android:layout_marginTop="100dp"
-        android:textSize="20dp"/>
 
 </LinearLayout>
