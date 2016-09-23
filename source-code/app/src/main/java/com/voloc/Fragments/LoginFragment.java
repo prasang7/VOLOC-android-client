@@ -31,7 +31,6 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view =  inflater.inflate(R.layout.fragment_login, container, false);
-
         init();
 
         bt_login_next.setOnClickListener(new View.OnClickListener() {

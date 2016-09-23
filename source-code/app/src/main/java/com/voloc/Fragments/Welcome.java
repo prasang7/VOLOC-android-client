@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.voloc.Activities.CourseOpenerActivity;
 import com.voloc.Adapter.RVAdapter;
@@ -52,12 +53,10 @@ public class Welcome extends Fragment {
 
     void init() {
         recyclerView = (RecyclerView)view.findViewById(R.id.rv);
-
     }
     void recycler_view()
     {
-        mAdapter = new RVAdapter(courseList);
-
+        mAdapter = new RVAdapter(courseList,getActivity());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -66,13 +65,14 @@ public class Welcome extends Fragment {
     }
     private void prepareCourseData()
     {
-        String courseName[]={"Data science","machine Learning","Microprocessor","Algorithms"};
-        int photoId []={R.drawable.data_scientist,R.drawable.data_scientist,R.drawable.data_scientist,R.drawable.data_scientist};
-        String courseFaculty []={"prof,xyz","prof.abcd","prof,mnbv","prof.gjks"};
+        String courseName[]={"Data science","Machine Learning","Microprocessor","Algorithms"};
+        int photoId []={0,0,0,0};
+        String courseFaculty []={"Prof,Xyz","Prof.Abcd","Prof,Mnbv","Prof.Gjks"};
 
         for (int i=0;i<photoId.length;i++)
         {
             Data course=new Data(courseName[i],courseFaculty[i],photoId[i]);
+
             courseList.add(course);
         }
         mAdapter.notifyDataSetChanged();

@@ -3,13 +3,13 @@ package com.voloc.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,14 +25,12 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder> {
     private List<Data> coursesList;
     private RecyclerView recyclerView;
     CardView cv;
-    private final static int FADE_DURATION = 1000;
-    private int lastPosition = -1;//
     Context context;//
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView courseName, courseFaculty;
-        public ImageView photoId;
+        public ImageView photoId,menu_options;
         LinearLayout container;
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -42,22 +40,27 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder> {
             courseFaculty = (TextView) itemView.findViewById(R.id.course_faculty);
             photoId = (ImageView) itemView.findViewById(R.id.course_image);
             recyclerView = (RecyclerView)itemView.findViewById(R.id.rv);
-            photoId.setOnClickListener(this);
+            menu_options=(ImageView) itemView.findViewById(R.id.nut);
+            cv.setOnClickListener(this);
+            //photoId.setOnClickListener(this);
         }
 
 
         @Override
         public void onClick(View v) {
-            Context context = itemView.getContext();
-            int position=getAdapterPosition();
-            Toast.makeText(context,"position ="+ position,Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(context, CourseOpenerActivity.class);
-            context.startActivity(intent);
+                Context context = itemView.getContext();
+                int position = getAdapterPosition();
+                Toast.makeText(context, "position =" + position, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, CourseOpenerActivity.class);
+                context.startActivity(intent);
+
+
         }
     }
 
-    public RVAdapter(List<Data> coursesList) {
+    public RVAdapter(List<Data> coursesList,Context context) {
         this.coursesList = coursesList;
+        this.context=context;
     }
 
     @Override
@@ -70,24 +73,18 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
         Data course = coursesList.get(position);
         holder.courseName.setText(course.getCourseName());
         holder.courseFaculty.setText(course.getCourseFaculty());
         holder.photoId.setImageResource(course.getPhotoId());
-       // setAnimation(holder.container, position);//
+        holder.menu_options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showPopupMenu(holder.menu_options,position);
+            }
+        });
     }
-
-   /* private void setAnimation(View viewToAnimate, int position)
-    {
-        // If the bound view wasn't previously displayed on screen, it's animated
-        if (position > lastPosition)
-        {
-            Animation animation = AnimationUtils.loadAnimation(context,android.R.anim.slide_in_left);
-            viewToAnimate.startAnimation(animation);
-            lastPosition = position;
-        }
-    }*/
     @Override
     public int getItemCount() {
         return coursesList.size();
@@ -96,6 +93,34 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.MyViewHolder> {
     @Override
     public void onAttachedToRecyclerView(RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    private void showPopupMenu(View view , int position) {
+        PopupMenu popup = new PopupMenu(context, view);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.menu_courses, popup.getMenu());
+        popup.setOnMenuItemClickListener(new MyMenuItemClickListener(position));
+        popup.show();
+    }
+    class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
+            int position;
+        public MyMenuItemClickListener(int position) {
+            this.position=position;
+        }
+        @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
+                case R.id.action_add_favourite:
+                    Toast.makeText(context, "interested"+position, Toast.LENGTH_SHORT).show();
+
+                    return true;
+                case R.id.action_play_next:
+                    Toast.makeText(context, "about courses", Toast.LENGTH_SHORT).show();
+                    return true;
+                default:
+            }
+            return false;
+        }
     }
 
 }
