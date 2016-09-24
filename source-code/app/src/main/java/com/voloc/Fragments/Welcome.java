@@ -46,16 +46,17 @@ public class Welcome extends Fragment {
         view = inflater.inflate(R.layout.fragment_welcome, container, false);
 
         init();
+
         recycler_view();
-        // Inflate the layout for this fragment
+
         return view;
     }
 
     void init() {
         recyclerView = (RecyclerView)view.findViewById(R.id.rv);
     }
-    void recycler_view()
-    {
+
+    void recycler_view() {
         mAdapter = new RVAdapter(courseList,getActivity());
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
@@ -63,21 +64,17 @@ public class Welcome extends Fragment {
         recyclerView.setAdapter(mAdapter);
         prepareCourseData();
     }
-    private void prepareCourseData()
-    {
+
+    private void prepareCourseData() {
         String courseName[]={"Data science","Machine Learning","Microprocessor","Algorithms"};
         int photoId []={0,0,0,0};
         String courseFaculty []={"Prof,Xyz","Prof.Abcd","Prof,Mnbv","Prof.Gjks"};
 
-        for (int i=0;i<photoId.length;i++)
-        {
+        for (int i=0;i<photoId.length;i++) {
             Data course=new Data(courseName[i],courseFaculty[i],photoId[i]);
-
             courseList.add(course);
         }
         mAdapter.notifyDataSetChanged();
-
-
     }
     @Override
     public void onAttach(Activity activity) {
