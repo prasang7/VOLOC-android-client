@@ -36,7 +36,7 @@ public class LoginFragment extends Fragment {
         bt_login_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity().getApplicationContext(), Home.class);
+                Intent i = new Intent(getActivity().getApplicationContext(),Home.class);
                 startActivity(i);
             }
         });
