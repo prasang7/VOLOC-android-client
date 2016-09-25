@@ -3,7 +3,6 @@ package com.voloc.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -22,6 +21,7 @@ import com.voloc.R;
 import com.voloc.Fragments.Fragment_Video;
 import com.voloc.Fragments.Fragment_Quiz;
 import com.voloc.Fragments.Fragment_Documentation;
+import com.voloc.Activities.play_video;
 
 public class CourseOpenerActivity extends AppCompatActivity  {
 
@@ -110,6 +110,9 @@ public class CourseOpenerActivity extends AppCompatActivity  {
             return mFragmentTitleList.get(position);
         }
     }
-
-
+    public void video(View view)
+    {
+        Intent intent=new Intent(this,play_video.class);
+        startActivity(intent);
+    }
 }

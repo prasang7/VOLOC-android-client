@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="com.voloc.play_video">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+    </android.support.design.widget.AppBarLayout>
+
+    <VideoView
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:id="@+id/videoView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_weight="50"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/Name_Video"
+        android:text="Video1: "
+        android:layout_below="@+id/videoView"
+         />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/comment_list"
+        android:layout_below="@+id/Name_Video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/comment_list"
+        android:text="Comments"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back"
+        />
+
+</RelativeLayout>
