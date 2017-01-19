@@ -1,5 +1,5 @@
 # VOLOC-Android-Client
-This repository contains the android client of VOLOC. 
+VOLOC is an online learning portal (MOOC) providing e-learning with Video Lectures, Quizzes, and Documentations on various topics and subjects. Its an ongoing project with web-app and anroid app under construction. VOLOC aims at providing free video lectures and tutorials to all. It is currently registered under VIT University.
 
 ## Development Setup
 1. Go to the project repo and click the `Fork` button
