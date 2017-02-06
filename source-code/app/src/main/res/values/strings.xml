@@ -26,4 +26,49 @@
     <string name="question">\?</string>
 
 
+
+
+    <!-- Documentation -->
+        <string name="intro_documentation">The vedio is based on Android, at the end of
+    vedio you should be able to learn to create simple and basic Android Application.</string>
+    <string name="content_documentation">First open a blank Activity
+    Then go to your content_main.xml file and with the help of drag and drop or code one text view, Edit text and a button.
+    Now in the text view put the text "Welcome", set background as blue.
+    Now Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH  Blah blah BLAH Blah blah BLAH          Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH    Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH  Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+     Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH Blah blah BLAH
+    And then on clicking the button the colour of the background should change to blue.</string>
+    <string name="Testing_documentation">So to test it connect your devise or you can also use virtual machine.
+    It is more preffered to use a devise reather than a virtual device to save your time.
+    To test click on the green triangle pointing towards right side on your Android Studio.
+    Once the apk is installed in your android device, the app would be launched automatically.
+    Now click on the button, on clicking the button you would see that background color changes to blue from white.</string>
+    <string name="summary_documentation">So at the end of this tutorial you should be able to make a simple Android Application.
+    In this application you learned about how to change the color, simillary you can change thr text of the text_view with the help of intent.
+    To learn how to create and launch new Activity see our next tutorial or follow our next documentation on "Launching new activity with Intent"</string>
+    <!-- Documentation string ends -->
+    <!-- Strings to change the mode -->
+    <string name="menu_night_mode">Change the mode</string>
+    <string name="menu_night_mode_system">Follow system</string>
+    <string name="menu_night_mode_day">Day (always)</string>
+    <string name="menu_night_mode_night">Night (always)</string>
+    <string name="menu_night_mode_auto">Auto</string>
+    <string name="Color">TextColor</string>
+
+
 </resources>

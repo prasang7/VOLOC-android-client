@@ -1,17 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Coordinate layout gives fading type effect with collapsing toolbar layout -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:padding="@dimen/default_margin_padding"
+              android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="Documentation!"
-        android:textStyle="bold"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="24dp"
+                android:background="#ede4e4">
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_margin">
+
+                <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Topic"
+                            android:textSize="32dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="APPs in ANDROID Studio"
+                            android:textStyle="bold"
+                            android:textSize="24dp"/>
+                    <!-- To see the string go to Values->String-->
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/card_margin">
+
+                <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Introduction"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/intro_documentation" />
+                    <!-- To see the string go to Values->String-->
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/card_margin"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+
+                <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/content_documentation" />
+                    <!-- To see the string go to Values->String-->
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/card_margin"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+
+                <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Testing of Application"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Testing_documentation" />
+                    <!-- To see the string go to Values->String-->
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/card_margin"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin">
+
+                <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Summary"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary_documentation" />
+                    <!-- To see the string go to Values->String-->
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/card_margin"
+                    android:layout_marginLeft="@dimen/card_margin"
+                    android:layout_marginRight="@dimen/card_margin"
+                    android:background="#80cfffff">
+
+                <LinearLayout
+                        style="@style/Widget.CardContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#80ffffff">
+
+                    <Button
+                            android:id="@+id/download_doc_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#804a5ec2"
+                            android:text="Download Document"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </LinearLayout>
+
+
+
